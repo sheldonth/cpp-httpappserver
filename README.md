@@ -1,4 +1,4 @@
-Kinda, maybe a ExpressJS-esque application server interface in pure C++
+Kinda, maybe an ExpressJS-esque application server interface in pure C++
 
 Usage:
 - `git submodule init`
