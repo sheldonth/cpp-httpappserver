@@ -13,4 +13,11 @@ add_executable(${SERVER_TARGET_EXEC}
   ${OBJECTS}
 )
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_PREFIX_PATH "${CMAKE_PREFIX_PATH} ${PROJECT_SOURCE_DIR}/deps")
+# find_package(cppnetlib 0.11.0 REQUIRED)
+
+set(Uri_BUILD_TESTS no)
+add_subdirectory(deps/cpp-netlib)
+include_directories(${CPPNETLIB_INCLUDE_DIRS})
+target_link_libraries(${SERVER_TARGET_EXEC} ${CPPNETLIB_LIBRARIES})
 
